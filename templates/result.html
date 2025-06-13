@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customblue: "#7091e6",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-customblue min-h-screen flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg p-9 w-full max-w-xl">
+      <h1 class="text-2xl font-bold text-center text-customblue mb-4">
+        Form Submission Result
+      </h1>
+      <table class="w-full table-auto border border-gray-200">
+        <thead>
+          <tr>
+            <th class="border px-4 py-2">Field</th>
+            <th class="border px-4 py-2">Value</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="border-t">
+            <td class="px-4 py-2 font-semibold text-center">Name</td>
+            <td class="px-4 py-2 text-center">{{ name }}</td>
+          </tr>
+
+          <tr class="border-t">
+            <td class="px-4 py-2 font-semibold text-center">Age</td>
+            <td class="px-4 py-2 text-center">{{ age }}</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-2 font-semibold text-center">Gender</td>
+            <td class="px-4 py-2 text-center">{{ gender }}</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-2 font-semibold text-center">Email</td>
+            <td class="px-4 py-2 text-center">{{ email }}</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-2 font-semibold text-center">Phone</td>
+            <td class="px-4 py-2 text-center">{{ phone }}</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-2 font-semibold text-center">City</td>
+            <td class="px-4 py-2 text-center">{{ city }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mt-6 text-center">
+        <a href="/submit" class="inline-block bg-customblue text-white px-4 py-2 rounded-lg hover:bg-blue-800">Fill-Again</a>
+
+      </div>
+    </div>
+  </body>
+</html>

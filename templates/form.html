@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-form</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customblue: "#7091e6",
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-customblue flex items-center justify-center min-h-screen">
+    <div class="bg-white p-9 rounded-lg shadow-lg w-full max-w-md ">
+    <form action='/submit' method="POST">
+        
+        <h1 class="flex justify-center mb-3 font-medium">Enter Your Details</h1>
+        <div class="">
+        <label class="block mb-2 font-medium">Name</label>
+        <input class="w-full border border-customblue p-2 rounded-lg" type="text" name="name" placeholder="Enter your name">
+        <br><br>
+        </div>
+        <div>
+        <label class="block mb-2 font-medium">Email</label>
+        <input class="w-full border border-customblue p-2 rounded-lg" type="email" name="email" placeholder="Enter your email">
+        <br><br>
+        </div>
+        <div> 
+        <label class="block mb-2 font-medium">Age</label>  
+        <input class="w-full border border-customblue p-2 rounded-lg" type="number" name="age" placeholder="Enter your age">
+        <br><br>
+        </div>
+        <div>
+        <label class="block mb-2 font-medium">Gender</label>
+        <input class="w-full border border-customblue p-2 rounded-lg" type="text" name="gender" placeholder="Enter your gender">
+        <br><br>
+        </div>
+        <div>
+        <label class="block mb-2 font-medium">City</label>
+        <input class="w-full border border-customblue p-2 rounded-lg" type="text" name="city" placeholder="Enter your city">
+        <br><br>
+        </div>
+        <div>
+        <label class="block mb-2 font-medium">Phone</label>
+        <input class="w-full border border-customblue p-2 rounded-lg" type="tel" name="phone" placeholder="Enter your phone number">
+        <br><br>
+        </div>
+        <button class="w-full bg-customblue p-2 rounded-lg text-white hover:bg-blue-800" type="submit">Submit</button>
+        </div>
+
+    </form>
+</body>
+</html>

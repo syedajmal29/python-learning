@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customblue: "#7091e6",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-customblue flex items-center justify-center min-h-screen">
+    <div class="bg-white p-9 rounded-lg shadow-lg w-full max-w-md">
+      <form action="/signup" method="post">
+        <div>
+        <label class="block mb-2 font-medium" for="name">username</label>
+        <input
+          class="w-full border border-customblue p-2 rounded-lg "
+          type="text"
+          name="username"
+          placeholder="Enter your username"
+          required
+        />
+        <br /><br />
+        </div>
+        <div>
+
+       
+        <label  class="block mb-2 font-medium" for="name">Password</label>
+        <input
+          class="w-full border border-customblue p-2 rounded-lg "
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <br /><br />
+         </div>
+        <button class="w-full bg-customblue text-white py-2 rounded-lg hover:bg-blue-800 " type="submit">signup</button>
+      </form>
+    </div>
+  </body>
+</html>
