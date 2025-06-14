@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Feedback</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 min-h-screen flex items-center justify-center p-10">
+  <form method="POST" class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center">Edit Feedback</h2>
+
+    <label class="block mb-2">Name:</label>
+    <input type="text" name="name" value="{{ feedback[1] }}" class="w-full border p-2 mb-4" required>
+
+    <label class="block mb-2">Age:</label>
+    <input type="number" name="age" value="{{ feedback[2] }}" class="w-full border p-2 mb-4" required>
+
+    <label class="block mb-2">Gender:</label>
+    <input type="text" name="gender" value="{{ feedback[3] }}" class="w-full border p-2 mb-4" required>
+
+    <label class="block mb-2">Phone:</label>
+    <input type="text" name="phone" value="{{ feedback[4] }}" class="w-full border p-2 mb-4" required>
+
+    <label class="block mb-2">Email:</label>
+    <input type="email" name="email" value="{{ feedback[5] }}" class="w-full border p-2 mb-4" required>
+
+    <label class="block mb-2">City:</label>
+    <input type="text" name="city" value="{{ feedback[6] }}" class="w-full border p-2 mb-4" required>
+
+    <div class="flex justify-between">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Update</button>
+      <a href="/all-feedback" class="text-blue-600 underline">Back</a>
+    </div>
+  </form>
+</body>
+</html>
