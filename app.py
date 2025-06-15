@@ -142,6 +142,11 @@ def all_feedback():
     conn.close()
     return render_template('all_feedback.html', feedbacks=rows)
 
+ @app.route('/logout')
+def logout():
+    session.pop('username', None)  # Remove the logged-in user
+    return redirect(url_for('login'))  # Go back to login page   
+
 
 # @app.route('/') is a decorator that tells Flask what URL should trigger the function below.
 # The home function returns a simple HTML message when you visit the root URL.
